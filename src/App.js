@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+
+const env = process.NODE_ENV;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const checkEnv = env => {
+   if (env==='development') {
+       return 'DEV'
+   } else {
+       return 'NON-DEV'
+   }
+  };
+
+  return <React.Fragment> {checkEnv(env)} </React.Fragment>;
 }
 
 export default App;
