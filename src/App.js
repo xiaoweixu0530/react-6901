@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-const env = process.NODE_ENV;
+const env = process.env.NODE_ENV;
 
 function App() {
   const checkEnv = env => {
