@@ -5,9 +5,10 @@ import "./App.css";
 const env = process.env.NODE_ENV;
 
 class App extends React.Component {
-  state = {
-    test: "123"
-  };
+  constructor(props) {
+    super(props);
+    this.state = { test: "123" };
+  }
   checkEnv = env => {
     if (env === "development") {
       return "DEV";
